@@ -27,15 +27,15 @@ class WebViewCallbackTest : Kogarasi.WebView.IWebViewCallback
 {
 	public void onLoadStart( string url )
 	{
-		Debug.Log( "call onLoadStart" );
+		Debug.Log( "call onLoadStart : " + url );
 	}
 	public void onLoadFinish( string url )
 	{
-		Debug.Log( "call onLoadFinish" );
+		Debug.Log( "call onLoadFinish : " + url );
 	}
 	public void onLoadFail( string url )
 	{
-		Debug.Log( "call onLoadFail" );
+		Debug.Log( "call onLoadFail : " + url );
 	}
 }
 

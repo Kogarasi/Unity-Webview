@@ -20,13 +20,6 @@ public class UnityWebViewClient extends WebViewClient
 	@Override
 	public void onPageStarted( WebView view, String url, Bitmap favicon)
 	{
-		
-		/*
-		WebViewPluginInterface Interface = new WebViewPluginInterface( gameObject );
-		
-		Interface.call( "Location:" + url );
-		*/
-		
 		UnityPlayer.UnitySendMessage( mGameObject , "onLoadStart",url );
 	}
 

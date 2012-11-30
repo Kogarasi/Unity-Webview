@@ -24,31 +24,28 @@
 
 using UnityEngine;
 
-namespace Kogarasi
+namespace Kogarasi.WebView
 {
-	namespace WebView
+	public interface IWebView
 	{
-		public interface IWebView
-		{
 
-			void Init( string name );
-			void Term();
-	
-			void SetMargins( int left, int top, int right, int bottom );
-			void SetVisibility( bool state );
+		void Init( string name );
+		void Term();
 
-			void LoadURL( string url );
+		void SetMargins( int left, int top, int right, int bottom );
+		void SetVisibility( bool state );
 
-			void EvaluateJS( string js );
+		void LoadURL( string url );
 
-			void OnUpdate( GameObject go );
-		}
+		void EvaluateJS( string js );
 
-		public interface IWebViewCallback
-		{
-			void onLoadStart( string url );
-			void onLoadFinish( string url );
-			void onLoadFail( string url );
-		}
+		void OnUpdate( GameObject go );
+	}
+
+	public interface IWebViewCallback
+	{
+		void onLoadStart( string url );
+		void onLoadFinish( string url );
+		void onLoadFail( string url );
 	}
 }
