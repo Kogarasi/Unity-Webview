@@ -15,7 +15,6 @@ namespace Kogarasi.WebView
 
 		void EvaluateJS( string js );
 
-		void OnUpdate( GameObject go );
 	}
 
 	public interface IWebViewCallback
